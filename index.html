@@ -91,6 +91,7 @@
   @media (max-width: 700px) { .figs { grid-template-columns: 1fr; } }
   figure { margin: 0; background: var(--panel); border-radius: 4px; overflow: hidden; }
   figure img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+  figure img.cutout { object-fit: contain; padding: 6px; }
   figcaption { padding: 10px 12px 12px; font-size: 0.86rem; line-height: 1.4; color: var(--muted); }
   figcaption b { color: var(--ink); font-weight: 500; }
 
@@ -125,7 +126,7 @@
   <aside class="side">
     <img class="portrait" src="images/portrait.jpg" alt="Portrait of Wentao Xu">
     <h1>Wentao Xu</h1>
-    <p class="role">PhD candidate, Electrical Engineering and Computer Sciences<br>University of California, Berkeley<br>Advised by <b><a href="https://www.boleslab.org/">Prof. Jessica Boles</a></b></p>
+    <p class="role">PhD candidate, <a href="https://www.boleslab.org/">Boles Lab</a>, <a href="https://bpec.berkeley.edu/">Berkeley Power &amp; Energy Center</a> (BPEC), Electrical Engineering and Computer Sciences<br>University of California, Berkeley<br>Advised by <b><a href="https://www2.eecs.berkeley.edu/Faculty/Homepages/boles.html">Prof. Jessica Boles</a></b></p>
     <ul class="contact">
       <li><a href="mailto:wentao.xu@berkeley.edu">wentao.xu@berkeley.edu</a></li>
       <li>Cory Hall 406, Berkeley, CA 94720</li>
@@ -139,13 +140,15 @@
       <a href="#patents">Patents</a>
       <a href="#honors">Honors</a>
       <a href="#education">Education</a>
+      <a href="#beyond">Beyond research</a>
     </nav>
   </aside>
 
   <main>
     <section class="intro" id="about">
-      <p class="lede">I build power converters out of vibrating piezoelectric components instead of magnetics.</p>
-      <p>I am a PhD candidate in EECS at UC Berkeley, working with Prof. Jessica Boles on bulk and thin-film piezoelectric components for power conversion. My research spans power electronics, MEMS design and microfabrication: I model multi-port and overtone piezoelectric components, design and solder power converters that exploit their potential, and also design and fabricate thin-film piezoelectric devices at Marvell Nanolab at UC Berkeley.</p>
+      <p class="lede">I build power converters out of vibrating piezoelectric components.</p>
+      <p>I am a PhD candidate in EECS at UC Berkeley, working with Prof. Jessica Boles on bulk and thin-film piezoelectric components for power conversion. My research interests include power electronics, and MEMS design and microfabrication for power conversion. I model multi-port and overtone piezoelectric components, design power converters that exploit their potential, and also design and fabricate thin-film piezoelectric devices at <a href="https://nanolab.berkeley.edu/">Marvell Nanolab</a>.</p>
+      <p>After graduation, I plan to pursue a faculty position and build a research group focused on MEMS design, fabrication, and converter-component co-design for high-performance power converters.</p>
       <p>Before Berkeley, I earned a BSE from the University of Michigan and a BSE from Shanghai Jiao Tong University, where I also minored in mathematics at UM and IP law at SJTU.</p>
     </section>
 
@@ -153,37 +156,36 @@
       <h2>News</h2>
       <ul class="news">
         <li class="hot"><time datetime="2026-10">Oct 2026</time><div>Our new paper was accepted to <b>IEEE MEMS 2027</b> as an <b>oral presentation</b>. See you on the Big Island of Hawaii!</div></li>
-        <li><time datetime="2026-08">Aug 2026</time><div>“Overtone Piezoelectric Resonators for Power Conversion” is published in <i>IEEE Transactions on Power Electronics</i>.</div></li>
+        <li><time datetime="2026-08">Aug 2026</time><div>“<a href="https://ieeexplore.ieee.org/document/11651566">Overtone Piezoelectric Resonators for Power Conversion</a>” is published as early access in <i>IEEE Transactions on Power Electronics</i>, an extension of the <a href="https://ieeexplore.ieee.org/document/10614005/">conference version</a> that received a Best Paper Award at COMPEL 2024.</div></li>
         <li><time datetime="2026-06">Jun 2026</time><div>Received the EECS Evergreen Graduate Research Award for undergraduate mentorship.</div></li>
+        <li><time datetime="2026-05">May 2026</time><div>Earned a Master of Science in EECS from UC Berkeley. Thesis: “<a href="https://www2.eecs.berkeley.edu/Pubs/TechRpts/2026/EECS-2026-174.html">Overtone Piezoelectric Resonators for Power Conversion</a>.”</div></li>
         <li><time datetime="2026-05">May 2026</time><div>Received the EECS Demetri Angelakos Memorial Achievement Award.</div></li>
-        <li><time datetime="2026-03">Mar 2026</time><div>Three papers presented at APEC 2026 in San Antonio; Ben Karish received a Technical Session Best Presentation Award.</div></li>
+        <li><time datetime="2026-03">Mar 2026</time><div>Three papers presented at APEC 2026 in San Antonio. Congratulations to my undergraduate mentee Benjamin Karish on receiving a Technical Session Best Presentation Award!</div></li>
         <li><time datetime="2026-01">Jan 2026</time><div>Innovation Award in the Lab-in-Fab Piezo MEMS Design Challenge, announced at IEEE MEMS 2026.</div></li>
       </ul>
     </section>
 
     <section class="research" id="research">
       <h2>Research</h2>
-      <p><b>Overtone piezoelectric resonators.</b> Operating a piezoelectric resonator at a higher-order mode decouples its electrical characteristics from its thickness, opening a new design space for high-frequency, high-power-density converters. This work received the COMPEL 2024 Best Paper Award and is now in <i>IEEE Transactions on Power Electronics</i>.</p>
-      <p><b>Multi-port piezoelectric components.</b> A single piezoelectric body with several electrode ports can act as a transformer, a resonator, and a power splitter at once. I develop approachable circuit models for these components, extend them to overtone operation, and use them to build differential power processors in which the piezoelectric element itself routes the mismatch power between ports.</p>
-      <p><b>Converter topologies and applications.</b> New components call for new circuits. I design converter topologies around piezoelectric resonators and transformers, including switched-resonator and overtone-reconfigurable converters, and apply them where magnetics are the bottleneck: mismatched solar panels, battery balancing, and general DC systems that need compact, efficient partial power processing.</p>
-      <p><b>Piezoelectric materials.</b> Synthesis and characterization of piezoelectric materials for power conversion, where loss, coupling, and power-handling limits matter more than the sensing and actuation figures of merit the materials are usually judged by.</p>
-      <p><b>Piezo MEMS for power.</b> Design and fabrication of thin-film piezoelectric MEMS devices for power conversion at the Berkeley Nanolab, from wafer processing through released structures and prototype boards.</p>
+      <p><b>Component modeling and design.</b> Operating a piezoelectric resonator at a higher-order overtone opens a new design space for high-frequency, high-density converters. Overtone resonators are multi-port components on a single piezoelectric substrate, and I have generalized existing equivalent-circuit modeling methods and proposed new accessible methods to model any multi-port piezoelectric component for power conversion.</p>
+      <p><b>Converter topology and application.</b> New components demand new circuits. I design converter topologies around piezoelectric resonators and transformers, including switched-resonator, overtone-reconfigurable, and differential power processing converters.</p>
+      <p><b>Thin-film piezoelectric MEMS.</b> Design and fabrication of thin-film piezoelectric MEMS devices for power conversion at Marvell Nanolab, from thin-film deposition, material characterization, photolithography and etching, and structure release to wire bonding and power tests on prototype boards.</p>
       <div class="figs">
         <figure>
           <img src="images/sem_hole.jpg" alt="Scanning electron micrograph of a 20 micrometer release hole in a thin-film piezoelectric membrane">
-          <figcaption><b>Release hole, 20 µm.</b> SEM of a thin-film piezoelectric stack over the etched cavity, Berkeley Nanolab.</figcaption>
+          <figcaption>SEM of a thin-film piezoelectric stack over the etched cavity, Berkeley Nanolab.</figcaption>
         </figure>
         <figure>
           <img src="images/wafers.jpg" alt="Cassette of silicon wafers inside a process tool">
-          <figcaption><b>In process.</b> Device wafers loaded in a cassette between fabrication steps.</figcaption>
+          <figcaption>Device wafers loaded in a cassette between fabrication steps.</figcaption>
         </figure>
         <figure>
-          <img src="images/three_port.jpg" alt="Converter board with a three-port piezoelectric component whose top electrode is split into three sectors">
-          <figcaption><b>Three-port component.</b> A single disc with a sectored electrode performs differential power processing for solar panels and DC systems.</figcaption>
+          <img class="cutout" src="images/three_port.png" alt="Converter board with a three-port piezoelectric component whose top electrode is split into three sectors">
+          <figcaption>Multi-port piezoelectric component for differential power processing.</figcaption>
         </figure>
         <figure>
-          <img src="images/prototype.jpg" alt="Prototype power converter board with a circular multi-ring piezoelectric component mounted at its center">
-          <figcaption><b>Prototype.</b> Multi-port piezoelectric component on a converter test board.</figcaption>
+          <img src="images/prototype.jpg" alt="Overtone piezoelectric resonator with concentric ring electrodes mounted on the backside of a converter prototype board">
+          <figcaption>Overtone piezoelectric resonator mounted on the backside of a converter prototype.</figcaption>
         </figure>
       </div>
     </section>
@@ -193,29 +195,29 @@
 
       <p class="year">2026</p>
       <ol class="pubs">
-        <li><span class="t">Overtone Piezoelectric Resonators for Power Conversion</span><span class="a"><b>W. Xu</b>, S. Naval, M. Touhami, J. D. Boles</span><span class="v"><i>IEEE Transactions on Power Electronics</i>, Aug. 2026</span></li>
-        <li><span class="t">Differential Power Processing Using a Multi-Port Piezoelectric Component</span><span class="a"><b>W. Xu</b>, S. Naval, J. D. Boles</span><span class="v"><i>IEEE Applied Power Electronics Conference and Exposition (APEC)</i>, San Antonio, Mar. 2026</span></li>
-        <li><span class="t">An Overtone-Reconfigurable Piezoelectric-Based Power Converter for Wide Load Range Applications</span><span class="a">B. Halfmann, <b>W. Xu</b>, J. D. Boles</span><span class="v"><i>IEEE APEC</i>, San Antonio, Mar. 2026</span></li>
-        <li><span class="t">Modeling and Analysis of Piezoelectric-Resonator-Based Power Converters with Finite Terminal Capacitance</span><span class="a">B. Karish, <b>W. Xu</b>, J. D. Boles</span><span class="v"><i>IEEE APEC</i>, San Antonio, Mar. 2026</span><span class="award">Technical Session Best Presentation Award</span></li>
-        <li><span class="t">High-Efficiency Isolated Piezoelectric Transformers for Magnetic-less DC-DC Power Conversion</span><span class="a">S. Naval, <b>W. Xu</b>, M. Touhami, J. D. Boles</span><span class="v"><i>IEEE Transactions on Power Electronics</i>, Jan. 2026</span></li>
+        <li><span class="t"><a href="https://ieeexplore.ieee.org/document/11651566">Overtone Piezoelectric Resonators for Power Conversion</a></span><span class="a"><b>W. Xu</b>, S. Naval, M. Touhami, J. D. Boles</span><span class="v"><i>IEEE Transactions on Power Electronics</i>, Early Access, Sep. 2026</span></li>
+        <li><span class="t"><a href="https://ieeexplore.ieee.org/abstract/document/11516999">Differential Power Processing Using a Multi-Port Piezoelectric Component</a></span><span class="a"><b>W. Xu</b>, S. Naval, J. D. Boles</span><span class="v"><i>IEEE APEC</i>, San Antonio, Mar. 2026</span></li>
+        <li><span class="t"><a href="https://ieeexplore.ieee.org/abstract/document/11517118">An Overtone-Reconfigurable Piezoelectric-Based Power Converter for Wide Load Range Applications</a></span><span class="a">B. Halfmann, <b>W. Xu</b>, J. D. Boles</span><span class="v"><i>IEEE APEC</i>, San Antonio, Mar. 2026</span></li>
+        <li><span class="t"><a href="https://ieeexplore.ieee.org/abstract/document/11517104">Modeling and Analysis of Piezoelectric-Resonator-Based Power Converters with Finite Terminal Capacitance</a></span><span class="a">B. Karish, <b>W. Xu</b>, J. D. Boles</span><span class="v"><i>IEEE APEC</i>, San Antonio, Mar. 2026</span><span class="award">Technical Session Best Presentation Award</span></li>
+        <li><span class="t"><a href="https://doi.org/10.1109/TPEL.2026.3656923">High-Efficiency Isolated Piezoelectric Transformers for Magnetic-less DC-DC Power Conversion</a></span><span class="a">S. Naval, <b>W. Xu</b>, M. Touhami, J. D. Boles</span><span class="v"><i>IEEE Transactions on Power Electronics</i>, Jan. 2026</span></li>
       </ol>
 
       <p class="year">2025</p>
       <ol class="pubs">
-        <li><span class="t">Approachable Modeling of Multi-port Piezoelectric Components for Power Conversion</span><span class="a"><b>W. Xu</b>, S. Naval, J. D. Boles</span><span class="v"><i>IEEE Workshop on Control and Modeling for Power Electronics (COMPEL)</i>, Knoxville, Jun. 2025</span></li>
-        <li><span class="t">Overtone Piezoelectric Transformers for Magnetic-less Power Conversion</span><span class="a">S. Naval, <b>W. Xu</b>, M. Touhami, J. D. Boles</span><span class="v"><i>IEEE COMPEL</i>, Knoxville, Jun. 2025</span></li>
-        <li><span class="t">High-Efficiency Isolated Piezoelectric Transformers for Magnetic-less DC-DC Power Conversion</span><span class="a">S. Naval, <b>W. Xu</b>, M. Touhami, J. D. Boles</span><span class="v"><i>IEEE APEC</i>, Atlanta, Mar. 2025</span><span class="award">Technical Session Best Presentation Award</span></li>
+        <li><span class="t"><a href="https://ieeexplore.ieee.org/document/11121252">Approachable Modeling of Multi-port Piezoelectric Components for Power Conversion</a></span><span class="a"><b>W. Xu</b>, S. Naval, J. D. Boles</span><span class="v"><i>IEEE Workshop on Control and Modeling for Power Electronics (COMPEL)</i>, Knoxville, Jun. 2025</span></li>
+        <li><span class="t"><a href="https://ieeexplore.ieee.org/abstract/document/11121251">Overtone Piezoelectric Transformers for Magnetic-less Power Conversion</a></span><span class="a">S. Naval, <b>W. Xu</b>, M. Touhami, J. D. Boles</span><span class="v"><i>IEEE COMPEL</i>, Knoxville, Jun. 2025</span></li>
+        <li><span class="t"><a href="https://doi.org/10.1109/APEC48143.2025.10977397">High-Efficiency Isolated Piezoelectric Transformers for Magnetic-less DC-DC Power Conversion</a></span><span class="a">S. Naval, <b>W. Xu</b>, M. Touhami, J. D. Boles</span><span class="v"><i>IEEE APEC</i>, Atlanta, Mar. 2025</span><span class="award">Technical Session Best Presentation Award</span></li>
       </ol>
 
       <p class="year">2024</p>
       <ol class="pubs">
-        <li><span class="t">Overtone Piezoelectric Resonators for Power Conversion</span><span class="a"><b>W. Xu</b>, S. Naval, M. Touhami, J. D. Boles</span><span class="v"><i>IEEE COMPEL</i>, Lahore, Jun. 2024</span><span class="award">COMPEL 2024 Best Paper Award</span></li>
+        <li><span class="t"><a href="https://ieeexplore.ieee.org/document/10614005">Overtone Piezoelectric Resonators for Power Conversion</a></span><span class="a"><b>W. Xu</b>, S. Naval, M. Touhami, J. D. Boles</span><span class="v"><i>IEEE COMPEL</i>, Lahore, Jun. 2024</span><span class="award">COMPEL 2024 Best Paper Award</span></li>
       </ol>
 
       <p class="year">2022</p>
       <ol class="pubs">
-        <li><span class="t">Lite-Sparse Hierarchical Partial Power Processing for Heterogeneous Degradation of Batteries in Energy Storage Systems</span><span class="a">A. Ramyar, <b>W. Xu</b>, X. Cui, J. Siegel, A. Stefanopoulou, A.-T. Avestruz</span><span class="v"><i>IEEE Energy Conversion Congress and Exposition (ECCE)</i>, Detroit, Oct. 2022</span></li>
-        <li><span class="t">High-Speed Digital Control in a Switching-Synchronized Sampled-State Space for Variable Frequency Multi-Phase Buck Converters</span><span class="a">X. Cui, V. Contreras, <b>W. Xu</b>, A.-T. Avestruz</span><span class="v"><i>IEEE COMPEL</i>, Tel Aviv, Jun. 2022</span></li>
+        <li><span class="t"><a href="https://doi.org/10.1109/ECCE50734.2022.9948157">Lite-Sparse Hierarchical Partial Power Processing for Heterogeneous Degradation of Batteries in Energy Storage Systems</a></span><span class="a">A. Ramyar, <b>W. Xu</b>, X. Cui, J. Siegel, A. Stefanopoulou, A.-T. Avestruz</span><span class="v"><i>IEEE Energy Conversion Congress and Exposition (ECCE)</i>, Detroit, Oct. 2022</span></li>
+        <li><span class="t"><a href="https://doi.org/10.1109/COMPEL53829.2022.9829985">High-Speed Digital Control in a Switching-Synchronized Sampled-State Space for Variable Frequency Multi-Phase Buck Converters</a></span><span class="a">X. Cui, V. Contreras, <b>W. Xu</b>, A.-T. Avestruz</span><span class="v"><i>IEEE COMPEL</i>, Tel Aviv, Jun. 2022</span></li>
       </ol>
     </section>
 
@@ -250,10 +252,15 @@
       <h2>Education</h2>
       <dl class="rows">
         <div><dt>2023–</dt><dd>PhD, Electrical Engineering and Computer Sciences, University of California, Berkeley<small>Advisor: Prof. Jessica Boles</small></dd></div>
-        <div><dt>2023–25</dt><dd>MS, Electrical Engineering and Computer Sciences, University of California, Berkeley<small>Thesis: “Overtone Piezoelectric Resonators for Power Conversion”</small></dd></div>
+        <div><dt>2023–26</dt><dd>MS, Electrical Engineering and Computer Sciences, University of California, Berkeley<small>Thesis: “Overtone Piezoelectric Resonators for Power Conversion”</small></dd></div>
         <div><dt>2021–23</dt><dd>BSE, Computer Engineering, University of Michigan<small>Minor in Mathematics</small></dd></div>
         <div><dt>2019–23</dt><dd>BSE, Electrical and Computer Engineering, Shanghai Jiao Tong University<small>Minor in IP Law</small></dd></div>
       </dl>
+    </section>
+
+    <section id="beyond">
+      <h2>Beyond research</h2>
+      <p>Outside of research, I enjoy playing the piano and tennis, swimming, reading, and going on runs and hikes with friends.</p>
     </section>
 
     <footer>Last updated October 2026.</footer>
